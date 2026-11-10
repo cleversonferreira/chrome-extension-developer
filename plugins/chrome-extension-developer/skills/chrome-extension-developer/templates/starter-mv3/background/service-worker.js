@@ -21,7 +21,9 @@ browser.runtime.onInstalled.addListener(async ({ reason }) => {
 
 browser.runtime.onMessage.addListener((message, sender, sendResponse) => {
   // Only accept messages from our own extension pages (popup/options).
-  if (sender.id !== browser.runtime.id || !isMessage(message)) return;
+  // sender.id alone also matches our content scripts; those have sender.tab set.
+  const fromOwnPage = sender.id === browser.runtime.id && !sender.tab && sender.url?.startsWith(browser.runtime.getURL(''));
+  if (!fromOwnPage || !isMessage(message)) return;
   const handler = HANDLERS[message.type];
   handler(message, sender)
     .then((data) => sendResponse({ ok: true, data }))
