@@ -1,0 +1,14 @@
+{
+  "name": "chrome-extension-developer",
+  "owner": {
+    "name": "Cleverson Franco"
+  },
+  "plugins": [
+    {
+      "name": "chrome-extension-developer",
+      "source": "./plugins/chrome-extension-developer",
+      "description": "Chrome extension (Manifest V3) development, maintenance and publishing skill."
+    }
+  ],
+  "description": "Claude Code skills for Google Chrome extension development"
+}

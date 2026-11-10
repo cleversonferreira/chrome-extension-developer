@@ -1,0 +1,19 @@
+{
+  "extName": { "message": "Contador de Palavras (Starter)", "description": "Nome da extensão (máx. 75 caracteres)" },
+  "extDescription": { "message": "Conta as palavras da página atual. Template inicial Manifest V3.", "description": "Descrição (máx. 132 caracteres)" },
+  "actionTitle": { "message": "Contar palavras desta página" },
+  "countButton": { "message": "Contar palavras desta página" },
+  "counting": { "message": "Contando…" },
+  "countResult": {
+    "message": "Esta página tem $COUNT$ palavras.",
+    "placeholders": { "count": { "content": "$1", "example": "1.234" } }
+  },
+  "statPages": { "message": "Páginas contadas" },
+  "statWords": { "message": "Total de palavras" },
+  "resetButton": { "message": "Zerar" },
+  "optionsButton": { "message": "Opções" },
+  "optionsTitle": { "message": "Opções" },
+  "optionIncludeHidden": { "message": "Incluir texto oculto" },
+  "saved": { "message": "Salvo." },
+  "errorRestrictedPage": { "message": "Esta página não pode ser lida por extensões (ex.: páginas chrome:// ou a Web Store)." }
+}

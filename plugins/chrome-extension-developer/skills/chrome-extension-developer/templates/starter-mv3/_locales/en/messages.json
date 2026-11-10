@@ -1,0 +1,19 @@
+{
+  "extName": { "message": "Word Counter Starter", "description": "Extension name (max 75 chars)" },
+  "extDescription": { "message": "Counts the words on the current page. A Manifest V3 starter template.", "description": "Store/manifest description (max 132 chars)" },
+  "actionTitle": { "message": "Count words on this page" },
+  "countButton": { "message": "Count words on this page" },
+  "counting": { "message": "Counting…" },
+  "countResult": {
+    "message": "This page has $COUNT$ words.",
+    "placeholders": { "count": { "content": "$1", "example": "1,234" } }
+  },
+  "statPages": { "message": "Pages counted" },
+  "statWords": { "message": "Total words" },
+  "resetButton": { "message": "Reset" },
+  "optionsButton": { "message": "Options" },
+  "optionsTitle": { "message": "Options" },
+  "optionIncludeHidden": { "message": "Include hidden text" },
+  "saved": { "message": "Saved." },
+  "errorRestrictedPage": { "message": "This page can't be read by extensions (e.g. chrome:// pages or the Web Store)." }
+}

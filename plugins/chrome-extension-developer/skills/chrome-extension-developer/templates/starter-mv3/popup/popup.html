@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Popup</title>
+    <link rel="stylesheet" href="popup.css" />
+    <!-- No inline scripts: the extension CSP blocks them. -->
+    <script type="module" src="popup.js"></script>
+  </head>
+  <body>
+    <main>
+      <h1 data-i18n="extName"></h1>
+      <button id="count" type="button" data-i18n="countButton"></button>
+      <p id="status" role="status" aria-live="polite"></p>
+      <dl>
+        <dt data-i18n="statPages"></dt><dd id="pages">–</dd>
+        <dt data-i18n="statWords"></dt><dd id="words">–</dd>
+      </dl>
+      <footer>
+        <button id="reset" type="button" class="link" data-i18n="resetButton"></button>
+        <button id="options" type="button" class="link" data-i18n="optionsButton"></button>
+      </footer>
+    </main>
+  </body>
+</html>

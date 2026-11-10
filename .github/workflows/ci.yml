@@ -1,0 +1,29 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Lint starter template manifest
+        run: python3 plugins/chrome-extension-developer/skills/chrome-extension-developer/scripts/check_manifest.py plugins/chrome-extension-developer/skills/chrome-extension-developer/templates/starter-mv3/manifest.json --strict
+      - name: Syntax-check template JavaScript
+        run: find plugins/chrome-extension-developer/skills/chrome-extension-developer/templates -name '*.js' -print0 | xargs -0 -n1 node --check
+      - name: Validate JSON files
+        run: |
+          find . -name '*.json' -not -path './node_modules/*' -print0 | xargs -0 -n1 python3 -m json.tool > /dev/null
+      - name: Check SKILL.md frontmatter
+        run: |
+          head -n 5 plugins/chrome-extension-developer/skills/chrome-extension-developer/SKILL.md | grep -q '^name: chrome-extension-developer$'
+          head -n 5 plugins/chrome-extension-developer/skills/chrome-extension-developer/SKILL.md | grep -q '^description: '

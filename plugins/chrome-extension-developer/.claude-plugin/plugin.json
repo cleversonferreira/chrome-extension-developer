@@ -1,0 +1,19 @@
+{
+  "name": "chrome-extension-developer",
+  "version": "1.0.0",
+  "description": "Expert Claude Code skill for building, maintaining, auditing and publishing Google Chrome extensions (Manifest V3), based on the official Chrome documentation.",
+  "author": {
+    "name": "Cleverson Franco",
+    "url": "https://github.com/cleversonferreira"
+  },
+  "license": "MIT",
+  "keywords": [
+    "chrome",
+    "chrome-extension",
+    "manifest-v3",
+    "webextensions",
+    "skill"
+  ],
+  "homepage": "https://github.com/cleversonferreira/chrome-extension-developer",
+  "repository": "https://github.com/cleversonferreira/chrome-extension-developer"
+}
