@@ -5,3 +5,8 @@ dist/
 *.pem
 .DS_Store
 __pycache__/
+.env
+.env.*
+*.key
+.npmrc
+*.log
